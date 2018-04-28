@@ -6,7 +6,7 @@ if [ "$?" -eq 1 ]; then
         wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O ~/miniconda.sh
     elif [[ "$unamestr" == 'Darwin' ]]; then
         wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
-    if
+    fi
 
     bash ~/miniconda.sh -b -p $HOME/miniconda
     export PATH="$HOME/miniconda/bin:$PATH"
@@ -46,7 +46,7 @@ source deactivate
 conda create -n py36_jupyter python=3.6
 source activate py36_jupyter
 
-pip3 install --upgrade pip
-pip3 install jupyter
+pip install --upgrade pip
+pip install jupyter
 
 source deactivate
