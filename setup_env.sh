@@ -2,9 +2,14 @@
 
 which conda
 if [ "$?" -eq 1 ]; then
-    wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
-    chmod +x Miniconda2-latest-Linux-x86_64.sh
-    ./Miniconda2-latest-Linux-x86_64.sh
+    if [[ "$unamestr" == 'Linux' ]]; then
+        wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O ~/miniconda.sh
+    elif [[ "$unamestr" == 'Darwin' ]]; then
+        wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+    if
+
+    bash ~/miniconda.sh -b -p $HOME/miniconda
+    export PATH="$HOME/miniconda/bin:$PATH"
 else
     echo "Miniconda already installed"
 fi
@@ -34,5 +39,14 @@ source activate py27
 pip install -r requirements.txt
 pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl
 pip install torchvision 
+
+source deactivate
+
+
+conda create -n py36_jupyter python=3.6
+source activate py36_jupyter
+
+pip3 install --upgrade pip
+pip3 install jupyter
 
 source deactivate
