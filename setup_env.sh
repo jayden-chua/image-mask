@@ -16,24 +16,14 @@ else
     echo "Miniconda already installed"
 fi
 
-conda create -n py35_albu python=3.5
-source activate py35_albu
+conda create -n py35_all python=3.5
+source activate py35_all
 
 pip install --upgrade pip
 pip install -r ./albu/requirements.txt
 pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl
 pip install torchvision
-
-source deactivate
-
-
-conda create -n py35_ternaus python=3.5
-source activate py35_ternaus
-
-pip install --upgrade pip
-pip install -r ./ternaus/requirements.txt
-pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl
-pip install torchvision
+pip install jupyter
 
 source deactivate
 
@@ -48,11 +38,3 @@ pip install torchvision
 
 source deactivate
 
-
-conda create -n py36_jupyter python=3.6
-source activate py36_jupyter
-
-pip install --upgrade pip
-pip install jupyter
-
-source deactivate
