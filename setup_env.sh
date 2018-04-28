@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+unamestr=`uname`
+
 which conda
 if [ "$?" -eq 1 ]; then
     if [[ "$unamestr" == 'Linux' ]]; then
