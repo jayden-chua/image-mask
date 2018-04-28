@@ -28,13 +28,13 @@ pip install jupyter
 source deactivate
 
 
-conda create -n py27 python=2.7
-source activate py27
+#conda create -n py27 python=2.7
+#source activate py27
 
-pip install --upgrade pip
-pip install -r requirements.txt
-pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl
-pip install torchvision 
+#pip install --upgrade pip
+#pip install -r requirements.txt
+#pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl
+#pip install torchvision
 
-source deactivate
+#source deactivate
 
