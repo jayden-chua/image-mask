@@ -9,7 +9,8 @@ if [ "$?" -eq 1 ]; then
     fi
 
     bash ~/miniconda.sh -b -p $HOME/miniconda
-    export PATH="$HOME/miniconda/bin:$PATH"
+    echo 'export PATH="$HOME/miniconda/bin:$PATH"' >> ~/.bashrc
+    source ~/.bashrc
 else
     echo "Miniconda already installed"
 fi
