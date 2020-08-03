@@ -27,11 +27,11 @@ def main():
     output_img_resize = (388, 388)  # The resize size of the output images of the neural net
     # input_img_resize = (1024, 1024)
     # output_img_resize = (1024, 1024)
-    batch_size = 3
-    epochs = 50
+    batch_size = 2
+    epochs = 2
     threshold = 0.5
     validation_size = 0.2
-    sample_size = None  # Put 'None' to work on full dataset or a value between 0 and 1
+    sample_size = 0.008  # Put 'None' to work on full dataset or a value between 0 and 1
 
     # -- Optional parameters
     threads = cpu_count()

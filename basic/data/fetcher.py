@@ -36,7 +36,7 @@ class DatasetFetcher:
         competition_name = "carvana-image-masking-challenge"
 
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        destination_path = os.path.join(script_dir, '../../input/')
+        destination_path = os.path.join(script_dir, '../input/')
         prefix = ""
         if hq_files:
             prefix = "_hq"
